@@ -6,8 +6,14 @@ from psycopg2.extras import RealDictCursor
 import time
 from .config import settings 
 
+print(f"{settings.database_password}")
+
+
+new_password = settings.database_password.replace("!", "%21").replace("@", "%40")
+
+
 #set of url & engine with default values 
-SQLALCHEMY_database_url = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
+SQLALCHEMY_database_url = f"postgresql://{settings.database_username}:{new_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
 
 engine = create_engine(SQLALCHEMY_database_url)
 
