@@ -15,6 +15,9 @@ new_password = settings.database_password.replace("!", "%21").replace("@", "%40"
 #set of url & engine with default values 
 DATABASE_URL = f"postgresql://{settings.database_username}:{new_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
 
+if "sslmode=" not in DATABASE_URL:
+    DATABASE_URL += "?sslmode=require"
+
 engine = create_engine(DATABASE_URL)
 
 sessionlocal = sessionmaker(autocommit=False, autoflush=False, bind = engine)
