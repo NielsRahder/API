@@ -1,0 +1,13 @@
+# .slugignore
+*.pdf
+*.csv
+*.zip
+*.jpg
+*.png
+*.mp4
+*.ipynb
+data/
+notebooks/
+tests/
+venv/
+.git/
