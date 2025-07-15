@@ -9,10 +9,10 @@ from .config import settings
 print(f"{settings.database_password}")
 
 
-# new_password = settings.database_password.replace("!", "%21").replace("@", "%40")
+new_password = settings.database_password.replace("!", "%21").replace("@", "%40")
 
 #set of url & engine with default values 
-DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}?sslmode=require"
+DATABASE_URL = f"postgresql://{settings.database_username}:{new_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
 
 engine = create_engine(DATABASE_URL)
 
