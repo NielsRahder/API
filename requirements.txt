@@ -90,7 +90,6 @@ Pillow==10.1.0
 platformdirs==3.10.0
 plotly==5.17.0
 prompt-toolkit==3.0.39
-psutil==5.9.5
 psycopg2-binary==2.9.10
 ptyprocess==0.7.0
 pure-eval==0.2.2
@@ -104,7 +103,6 @@ Pygments==2.16.1
 PyMeeus==0.5.12
 pyparsing==3.1.1
 PySocks==1.7.1
-pystan>=3.0.0
 python-dateutil==2.8.2
 python-dotenv==1.1.1
 python-jose==3.5.0
@@ -130,14 +128,11 @@ starlette==0.46.2
 statsmodels==0.14.0
 sympy==1.12
 tenacity==8.2.3
-
 termcolor==2.3.0
 threadpoolctl==3.2.0
 tokenizers==0.14.1
 tornado==6.3.3
 tqdm==4.66.1
-traitlets==5.10.1
-
 trio==0.30.0
 trio-websocket==0.12.2
 typing-inspection==0.4.0
